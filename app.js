@@ -19,7 +19,7 @@ const draw = () => {
 }
 
 const winner = (userWin) => {
-    document.querySelector("#msg").innerText = userWin ? "You win!" : "You Lost:(";
+    document.querySelector("#msg").innerText = userWin ? `You win! ${userChoice} beats ${compChoice} ` : `You Lost:( ${compChoice} beats ${userChoice}`;
 
     if(userWin){
         UserScore++;
