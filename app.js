@@ -18,7 +18,7 @@ const draw = () => {
 
 }
 
-const winner = (userWin) => {
+const winner = (userWin,userChoice,compChoice) => {
     document.querySelector("#msg").innerText = userWin ? `You win! ${userChoice} beats ${compChoice} ` : `You Lost:( ${compChoice} beats ${userChoice}`;
 
     if(userWin){
@@ -39,9 +39,12 @@ const winner = (userWin) => {
 
 const game = (userChoice) => {
     const compChoice = genCompChoice();
+    console.log("User Choice: " + userChoice);
+    console.log("Computer Choice: " + compChoice);
 
     if(userChoice === compChoice){
         draw();
+        return;
     }
 
     let userWin = true;
@@ -56,7 +59,7 @@ const game = (userChoice) => {
         userWin = compChoice === 'paper' ? true : false;
     }
 
-    winner(userWin);
+    winner(userWin,userChoice,compChoice);
 
 }
 
