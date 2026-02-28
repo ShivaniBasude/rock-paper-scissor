@@ -41,6 +41,8 @@ const game = (userChoice) => {
     const compChoice = genCompChoice();
     console.log("User Choice: " + userChoice);
     console.log("Computer Choice: " + compChoice);
+        document.querySelector("#user-choice h3").innerText = "User Choice: " + userChoice; 
+        document.querySelector("#comp-choice h3").innerText = "Computer Choice: " + compChoice;
 
     if(userChoice === compChoice){
         draw();
