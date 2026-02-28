@@ -15,6 +15,7 @@ const genCompChoice =() => {
 
 const draw = () => {
     document.querySelector("#msg").innerText = "It's a draw!";
+    document.querySelector(".msg-container").style.backgroundColor = "burlywood";
 
 }
 
